@@ -1,0 +1,431 @@
+/*
+ * Theme Name: Plugin Architect
+ * Author: Kyle B. Johnson
+ * Author URI: http://kylebjohnson.me
+ * Description: A custom theme developed specifically for PluginArchitect.com
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * GitHub Theme URI: https://github.com/pluginarchitect/wp-theme
+*/
+
+/* #193457 */
+
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:300,700';
+@import 'https://use.fontawesome.com/releases/v5.0.6/css/all.css';
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 16px;
+   color: #303030;
+   background-color: white;
+   font-weight: 300;
+   font-family: 'Titillium Web', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: #091F3D;
+}
+
+section {
+   margin: 50px auto;
+}
+
+img {
+   margin: auto;
+   display: block;
+   max-width: 100%;
+}
+
+a.button {
+  color: inherit;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 2px solid white;
+}
+a.button:hover {
+  color: #193457;
+  background-color: white;
+}
+
+.container {
+  position: relative;
+  width: 720px;
+  padding: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blueprint {
+  background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, .1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, .1) 76%, transparent 77%, transparent);
+  background-size: 50px 50px, 50px 50px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.shoutout {
+   font-size: 2em;
+   margin: 100px auto;
+   text-align: center;
+}
+.shoutout a {
+   color: #193457;
+   text-decoration: none;
+   border-bottom: 3px solid #193457;
+}
+
+/*
+################
+               Masthead
+################
+*/
+.masthead {
+  color: white;
+  background-color: #193457;
+}
+.masthead--hero {
+   height: 100vh;
+}
+
+
+/*
+################
+               Main Navigation
+################
+*/
+.nav--main {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+.nav--main ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   display: flex;
+   justify-content: space-between;
+/*    flex-direction: column; */
+}
+.nav--main a {
+   color: inherit;
+   text-decoration: none;
+   text-align: center;
+}
+.nav--main a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 500px){
+   .nav--main .container {
+      flex-direction: row;
+   }
+}
+
+/*
+################
+               Hero
+################
+*/
+.hero {
+  height: 100vh;
+  min-height: 50vh;
+  max-height: 100vh;
+  padding-bottom: 20px;
+}
+.hero .container {
+  height: 100%;
+  display: grid;
+}
+.hero--logo {
+  opacity: .25;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82016/PluginArchitect_LogoTransparent.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.hero--logo a
+.hero--feature {
+  padding: 20px;
+  font-size: 1.2em;
+}
+.hero--feature-title {
+   font-size: 1.8em;
+}
+.hero--post {
+   text-align: center;
+   padding-bottom: 20px;
+}
+.hero--post-title {
+   color: white;
+}
+@media (min-width:720px){
+  .hero {
+    height: auto;
+    margin-top: 40px;
+  }
+  .hero .container {
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+  .hero--logo {
+    opacity: 1;
+    height: 400px;
+    position: relative;
+  }
+   .hero--feature {
+      margin-left: 20px;
+   }
+}
+
+/*
+################
+               Topic Grid
+################
+*/
+.topic-grid--section {
+   margin-top: 40px;
+   width: 900px;
+}
+.topic-grid--title {
+   font-size: 2em;
+   text-align: center;
+}
+.topic-grid {
+   width: 100%;
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: 1fr;
+}
+.topic {
+   color: gray;
+   padding: 20px;
+   text-align: center;
+   border: 5px solid transparent;
+   border-radius: 3%;
+
+   color: #193457;
+   background-color: #F5F6F7;
+}
+a.topic {
+   text-decoration: none;
+}
+.topic:hover {
+   color: #F5F6F7;
+   border-color: #193457;
+   background-color: #193457;
+}
+.topic--icon {
+   font-size: 3em;
+}
+.topic-title {
+   color: inherit;
+}
+@media (min-width:500px) {
+    .topic-grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+@media (min-width:700px) {
+    .topic-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+@media (min-width:900px) {
+   .topic-grid--section {
+      display: flex;
+      flex-direction: row;
+   }
+   .topic-grid--section.container {
+      width: 1024px;
+   }
+   .topic-grid--title {
+      text-align: right;
+      margin-right: 40px;
+      width: 200px; /* One word pre line. */
+      word-spacing: 100%; /* One word pre line. */
+   }
+   .topic-grid {
+      padding-left: 20px;
+      border-left: 2px solid #091F3D;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+/*
+################
+               Feature
+################
+*/
+.features {
+   padding: 20px;
+}
+.features--title {
+   text-align: center;
+   font-size: 2em;
+}
+.feature {
+   height: 100vh;
+   padding: 0;
+   margin: 60px auto;
+}
+.feature--image {
+   height: 40vh;
+}
+.feature--title {
+   margin-top: 0;
+}
+.feature--description {
+   height: 60vh;
+   padding: 20px;
+}
+@media (min-width: 500px){
+   .features .container {
+      width: 900px;
+   }
+   .features--title {
+      text-align: left;
+   }
+   .feature {
+      height: auto;
+      display: flex;
+      max-height: 200px;
+      border-radius: 5px;
+      box-shadow: 0px 3px 30px 0px rgba(206,211,220,0.75);
+   }
+   .feature--image {
+      margin: 0; /* Fit into the parent's layout. */
+      height: 200px; /* Match parent's max-width. */
+      border-radius: 5px 0 0 5px;
+   }
+   .feature--description {
+      padding: auto 20px;
+   }
+   /*
+   .feature:nth-of-type(even) {
+      text-align: right;
+      flex-direction: row-reverse;
+   }
+   */
+}
+
+/*
+################
+               About Page
+################
+*/
+.about-page {
+   display: flex;
+   justify-content: space-around;
+}
+.about-page--author {
+   padding: 20px;
+   max-width: 500px;
+}
+.about-page--author img {
+   width: 200px;
+   margin: auto;
+   border-radius: 50%;
+}
+
+/*
+################
+               NEWSLETTER SIGNUP
+################
+*/
+.newsletter-signup {
+   text-align: center;
+   padding-bottom: 40px;
+   background-color: #C8CFD6;
+}
+.newsletter-signup--form {
+}
+.newsletter-signup--form input {
+   display: block;
+   width: 100%;
+   border: 0;
+   padding: 20px;
+   font-size: .8em;
+}
+.newsletter-signup--form input[type="email"] {
+   padding: 20px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.newsletter-signup--form input[type="submit"] {
+   color: white;
+   cursor: pointer;
+   text-transform: uppercase;
+   background-color: #193457;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.newsletter-signup--thanks {
+   display: none;
+}
+@media (min-width:500px){
+   .newsletter-signup--form {
+      margin: auto;
+      display: grid;
+      grid-gap: 20px;
+      max-width: 500px;
+      grid-template-columns: 1fr 100px;
+   }
+   .newsletter-signup--form input {
+      border-radius: 5px;
+   }
+}
+
+/*
+################
+               Footer
+################
+*/
+.site-footer {
+   color: white;
+   background-color: #193457;
+   text-align: center;
+}
+.site-footer .container {
+   width: 900px;
+}
+.site-footer--copywrite {
+   display: flex;
+   align-items: center;
+}
+.site-footer--title {
+   font-weight: 700;
+}
+.site-footer--links {
+   margin-top: 20px;
+   text-align: left;
+}
+.site-footer--links a {
+   color: inherit;
+   text-decoration: none;
+}
+.site-footer--links a:hover {
+   text-decoration: underline;
+}
+.site-footer--links ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+.site-footer--links li {
+   margin: 5px auto;
+}
+@media (min-width: 650px){
+   .site-footer .container {
+      display: flex;
+      justify-content: space-between;
+   }
+}
